@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.glm set filetype=gleam
+au BufRead,BufNewFile *.gleam set filetype=gleam

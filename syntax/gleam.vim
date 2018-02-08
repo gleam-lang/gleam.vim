@@ -7,38 +7,45 @@ endif
 let b:current_syntax = "gleam"
 
 " Keywords
-syntax keyword gleamKeyword module export import from exposing in type alias match foreign
+syntax keyword gleamKeyword
+	\ module export from import
+	\ type alias
+	\ case cond
+	\ foreign
+	\ spec doc nodoc
+	\ send receive after
 highlight link gleamKeyword Keyword
 
 " Function definition
-syn match gleamDef '\<let\>\(:\)\@!' nextgroup=gleamFunctionDef skipwhite skipnl
+syn match gleamDef "fn" nextgroup=gleamFunctionDef skipwhite skipnl
+syn match gleamDef "test" nextgroup=gleamFunctionDef skipwhite skipnl
+syn match gleamDef "const" nextgroup=gleamFunctionDef skipwhite skipnl
 highlight link gleamDef Keyword
 
-syn match gleamSig '\<sig\>\(:\)\@!' nextgroup=gleamFunctionDef skipwhite skipnl
-highlight link gleamSig Keyword
-
-syn match  gleamFunctionDef "[^[:space:];#<,()\[\]]\+" contained skipwhite skipnl
-hi def link gleamFunctionDef Function
+syn match gleamFunctionDef "[a-z_-][A-Za-z_-]*" contained skipwhite skipnl
+highlight link gleamFunctionDef Function
 
 " Numbers
 syntax match gleamNumber "\v(\d+)"
 syntax match gleamNumber "\v(\d+)\.(\d+)"
-hi def link gleamNumber Number
-
-" Atoms
-syntax match gleamAtom ":[a-z][a-zA-Z_0-9]*"
-highlight link gleamAtom Constant
+highlight link gleamNumber Number
 
 " Operators
 syn match gleamOperator "\([-!#$%`&\*\+./<=>@\\^|~:]\|\<\>\)"
-hi def link gleamOperator Operator
+highlight link gleamOperator Operator
 
-syn match gleamType '\([a-z]\)\@<![A-Z]\w*'
-hi def link gleamType Identifier
+" Atoms
+syntax match gleamAtom ":[a-z][a-zA-Z_0-9]*"
+syntax region gleamAtom start=/\v:"/ skip=/\v\\./ end=/\v"/
+highlight link gleamAtom Constant
+
+" Type
+syn match gleamType "\([a-z]\)\@<![A-Z]\w*"
+highlight link gleamType Identifier
 
 " Comments
 syn region gleamCommentLine start="//" end="$" contains=gleamTodo
-hi def link gleamCommentLine   Comment
+highlight link gleamCommentLine Comment
 
 " String
 syntax region gleamString start=/\v"/ skip=/\v\\./ end=/\v"/

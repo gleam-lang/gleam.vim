@@ -14,4 +14,4 @@ setlocal smartindent nocindent
 setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 setlocal textwidth=79
 
-setlocal suffixesadd=.glm
+setlocal suffixesadd=.gleam
