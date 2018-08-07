@@ -8,12 +8,11 @@ let b:current_syntax = "gleam"
 
 " Keywords
 syntax keyword gleamKeyword
-	\ module export from import
+	\ module exposing import pub external
 	\ type alias
 	\ case cond
-	\ foreign
 	\ spec doc nodoc
-	\ send receive after
+	\ catch send receive after
 highlight link gleamKeyword Keyword
 
 " Function definition
