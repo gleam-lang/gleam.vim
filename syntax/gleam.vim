@@ -8,7 +8,7 @@ let b:current_syntax = "gleam"
 
 " Keywords
 syntax keyword gleamKeyword
-	\ module exposing import pub external
+	\ module import pub external behaviour
 	\ type alias
 	\ case cond
 	\ spec doc nodoc
@@ -33,11 +33,6 @@ highlight link gleamNumber Number
 syn match gleamOperator "\([-!#$%`&\*\+./<=>@\\^|~:]\|\<\>\)"
 highlight link gleamOperator Operator
 
-" Atoms
-syntax match gleamAtom ":[a-z][a-zA-Z_0-9]*"
-syntax region gleamAtom start=/\v:"/ skip=/\v\\./ end=/\v"/
-highlight link gleamAtom Constant
-
 " Type
 syn match gleamType "\([a-z]\)\@<![A-Z]\w*"
 highlight link gleamType Identifier
@@ -49,3 +44,7 @@ highlight link gleamCommentLine Comment
 " String
 syntax region gleamString start=/\v"/ skip=/\v\\./ end=/\v"/
 highlight link gleamString String
+
+" Atoms
+syntax region gleamString start=/\v'/ skip=/\v\\./ end=/\v'/
+highlight link gleamAtom Constant
