@@ -9,7 +9,7 @@ let b:current_syntax = "gleam"
 " Keywords
 syntax keyword gleamKeyword
 	\ module import pub external behaviour
-	\ type alias
+	\ type alias enum new
 	\ case cond
 	\ spec doc nodoc
 	\ catch send receive after
