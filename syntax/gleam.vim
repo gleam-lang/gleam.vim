@@ -14,12 +14,10 @@ syntax keyword gleamKeyword
 highlight link gleamKeyword Keyword
 
 " Function definition
-syntax match gleamDef "fn " nextgroup=gleamFunctionDef skipwhite
-syntax match gleamDef "test " nextgroup=gleamFunctionDef skipwhite
-syntax match gleamDef "const " nextgroup=gleamFunctionDef skipwhite
+syntax keyword gleamDef fn nextgroup=gleamFunctionDef skipwhite skipempty
 highlight link gleamDef Keyword
 
-syntax match gleamFunctionDef "[a-z_-][A-Za-z_-]*" contained skipwhite skipnl
+syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl
 highlight link gleamFunctionDef Function
 
 " Numbers
@@ -38,6 +36,9 @@ highlight link gleamType Identifier
 " Comments
 syntax region gleamCommentLine start="//" end="$" contains=gleamTodo
 highlight link gleamCommentLine Comment
+
+syntax keyword gleamTodo contained TODO FIXME XXX NB NOTE
+highlight def link rustTodo Todo
 
 " String
 syntax region gleamString start=/\v"/ skip=/\v\\./ end=/\v"/
