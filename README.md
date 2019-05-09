@@ -4,7 +4,7 @@
 
 This is a Vim plugin that provides [Gleam][gleam] support to Vim/Neovim.
 
-- Syntax highlight
+- Syntax highlighting.
 - Code snippets compatible with
   [UltiSnips](https://github.com/SirVer/ultisnips) and
   [vim-snipmate](https://github.com/garbas/vim-snipmate).
