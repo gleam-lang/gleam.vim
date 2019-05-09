@@ -1,0 +1,38 @@
+snippet fn "Named function"
+	fn ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+snippet pfn "Public named function"
+	pub fn ${1:function_name}(${2}) {
+		${0:${VISUAL}}
+	}
+snippet f "Anonymous function"
+	fn(
+snippet l "let variable"
+	let ${1} = ${0}
+snippet - "->"
+	-> ${0}
+snippet case "case expression"
+	case ${1} {
+	| ${2} -> ${0}
+	}
+snippet -- "case clause"
+	| ${1} -> ${0:${VISUAL}}
+snippet en "enum"
+	enum ${1:Name} =
+		| ${0:$1}
+snippet pen "Public enum"
+	enum ${1:Name} =
+		| ${0:$1}
+snippet ext "External type"
+	external type ${0}
+snippet pext "Public external type"
+	pub external type ${0}
+snippet exfn "External function"
+	external fn ${1:function_name}(${2}) -> ${3}
+		= "${4}" "${0}"
+snippet pexfn "Public external function"
+	pub external fn ${1:function_name}(${2}) -> ${3}
+		= "${4}" "${0}"
+snippet im "import"
+	import ${0:list}
