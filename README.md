@@ -13,7 +13,8 @@ This is a Vim plugin that provides [Gleam][gleam] support to Vim/Neovim.
 
 ### Using Vundle
 
-1. Add `Plugin 'lpil/gleam.vim'` to `~/.vimrc` or `~/.config/nvim/init.vim`
-2. Run `:PluginInstall`
+1. Add `Plugin 'gleam-lang/gleam.vim'` to `~/.vimrc` (for Vim) or
+   `~/.config/nvim/init.vim` (for Neovim).
+2. Run `:PluginInstall`.
 
 [gleam]: https://github.com/lpil/gleam.vim
