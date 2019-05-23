@@ -23,4 +23,4 @@ This is a Vim plugin that provides [Gleam][gleam] support to Vim/Neovim.
    `~/.config/nvim/init.vim` (for Neovim).
 2. Run `:PluginInstall`.
 
-[gleam]: https://github.com/lpil/gleam.vim
+[gleam]: https://github.com/lpil/gleam
