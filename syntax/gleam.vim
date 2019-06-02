@@ -9,7 +9,7 @@ let b:current_syntax = "gleam"
 " Keywords
 syntax keyword gleamKeyword
 	\ module import pub external
-	\ type alias enum let
+	\ type alias enum let as
 	\ case assert
 highlight link gleamKeyword Keyword
 
