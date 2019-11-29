@@ -9,7 +9,7 @@ let b:current_syntax = "gleam"
 " Keywords
 syntax keyword gleamKeyword
 	\ module import pub external
-	\ type alias enum let as
+  \ type alias enum let as if else
 	\ case assert struct
   \ trait implement derive where
 highlight link gleamKeyword Keyword
@@ -44,3 +44,7 @@ highlight def link rustTodo Todo
 " String
 syntax region gleamString start=/\v"/ skip=/\v\\./ end=/\v"/
 highlight link gleamString String
+
+" Annotations
+syntax match gleamAttribute "^\s*-[a-z_]*"
+highlight link gleamAttribute PreProc
