@@ -14,16 +14,24 @@ snippet - "->"
 	-> ${0}
 snippet case "case expression"
 	case ${1} {
-	| ${2} -> ${0}
+	  ${2} -> ${0}
 	}
-snippet -- "case clause"
-	| ${1} -> ${0:${VISUAL}}
+snippet st "struct"
+	struct ${1:Name} {
+		${0}
+	}
+snippet pst "pub struct"
+	pub struct ${1:Name} {
+		${0}
+	}
 snippet en "enum"
-	enum ${1:Name} =
-		| ${0:$1}
+	enum ${1:Name} {
+		${0:$1}
+	}
 snippet pen "Public enum"
-	enum ${1:Name} =
-		| ${0:$1}
+	pub enum ${1:Name} {
+		${0:$1}
+	}
 snippet ext "External type"
 	external type ${0}
 snippet pext "Public external type"
