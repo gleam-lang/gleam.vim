@@ -42,8 +42,10 @@ syntax keyword gleamTodo contained TODO FIXME XXX NB NOTE
 highlight def link rustTodo Todo
 
 " String
-syntax region gleamString start=/\v"/ skip=/\v\\./ end=/\v"/
+syntax region gleamString start=/"/ end=/"/ contains=gleamStringModifier
+syntax match gleamStringModifier '\\.' contained
 highlight link gleamString String
+highlight link gleamStringModifier Special
 
 " Annotations
 syntax match gleamAttribute "^\s*-[a-z_]*"
