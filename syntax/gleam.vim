@@ -21,10 +21,13 @@ highlight link gleamDef Keyword
 syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl
 highlight link gleamFunctionDef Function
 
-" Numbers
-syntax match gleamNumber "\v(\d+)"
-syntax match gleamNumber "\v(\d+)\.(\d+)"
-highlight link gleamNumber Number
+" Int
+syntax match gleamInt '\<[0-9][0-9_]*\>'
+highlight link gleamInt Number
+
+" Float
+syntax match gleamFloat '\<[0-9][0-9_]*\.[0-9_]*\>'
+highlight link gleamFloat Float
 
 " Operators
 syntax match gleamOperator "\([-!#$%`&\*\+./<=>@\\^|~:]\|\<\>\)"
