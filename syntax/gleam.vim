@@ -47,6 +47,6 @@ syntax match gleamStringModifier '\\.' contained
 highlight link gleamString String
 highlight link gleamStringModifier Special
 
-" Annotations
-syntax match gleamAttribute "^\s*-[a-z_]*"
+" Attribute
+syntax match gleamAttribute "#[a-z][a-z_]*"
 highlight link gleamAttribute PreProc
