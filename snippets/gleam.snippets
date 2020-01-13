@@ -1,14 +1,14 @@
-snippet fn "Named function"
+snippet fn "fn"
 	fn ${1:function_name}(${2}) {
 		${0:${VISUAL}}
 	}
-snippet pfn "Public named function"
+snippet pfn "pub fn"
 	pub fn ${1:function_name}(${2}) {
 		${0:${VISUAL}}
 	}
-snippet f "Anonymous function"
+snippet f "anonymous fn"
 	fn(${1}) { ${0:${VISUAL}} }
-snippet l "let variable"
+snippet l "let assignment"
 	let ${1} = ${0}
 snippet - "->"
 	-> ${0}
@@ -16,33 +16,27 @@ snippet case "case expression"
 	case ${1} {
 	  ${2} -> ${0}
 	}
-snippet st "struct"
-	struct ${1:Name} {
-		${0}
-	}
-snippet pst "pub struct"
-	pub struct ${1:Name} {
-		${0}
-	}
-snippet en "enum"
-	enum ${1:Name} {
+snippet ty "type"
+	type ${1:Name} {
 		${0:$1}
 	}
-snippet pen "Public enum"
-	pub enum ${1:Name} {
+snippet pty "pub type"
+	pub type ${1:Name} {
 		${0:$1}
 	}
-snippet ext "External type"
+snippet ext "external type"
 	external type ${0}
-snippet pext "Public external type"
+snippet pext "pub external type"
 	pub external type ${0}
-snippet exfn "External function"
+snippet exfn "external fn"
 	external fn ${1:function_name}(${2}) -> ${3}
 		= "${4}" "${0}"
-snippet pexfn "Public external function"
+snippet pexfn "pub external fn"
 	pub external fn ${1:function_name}(${2}) -> ${3}
 		= "${4}" "${0}"
 snippet im "import"
 	import ${0:list}
 snippet p "|>"
 	|> ${0}
+snippet tup "tuple()"
+	tuple(${0:${VISUAL}})
