@@ -1,9 +1,9 @@
 snippet fn "fn"
-	fn ${1:function_name}(${2}) {
+	fn ${1:function_name}(${2}) -> ${3} {
 		${0:${VISUAL}}
 	}
 snippet pfn "pub fn"
-	pub fn ${1:function_name}(${2}) {
+	pub fn ${1:function_name}(${2}) -> ${3}{
 		${0:${VISUAL}}
 	}
 snippet f "anonymous fn"
@@ -35,7 +35,7 @@ snippet pexfn "pub external fn"
 	pub external fn ${1:function_name}(${2}) -> ${3}
 		= "${4}" "${0}"
 snippet im "import"
-	import ${0:list}
+	import ${0:gleam/result}
 snippet p "|>"
 	|> ${0}
 snippet tup "tuple()"
