@@ -9,7 +9,7 @@ let b:current_syntax = "gleam"
 " Keywords
 syntax keyword gleamKeyword
 	\ module import pub external
-  \ type alias let as if else
+  \ type alias let as if else todo
 	\ case assert tuple
   \ trait implement derive where
 highlight link gleamKeyword Keyword
