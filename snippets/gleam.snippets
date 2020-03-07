@@ -1,12 +1,16 @@
 snippet fn "fn"
-	fn ${1:function_name}(${2}) -> ${3} {
-		${0:${VISUAL}}
+	fn ${1:function_name}(${2}) -> ${3:Nil} {
+		${0:${VISUAL:todo}}
 	}
 snippet pfn "pub fn"
-	pub fn ${1:function_name}(${2}) -> ${3}{
-		${0:${VISUAL}}
+	pub fn ${1:function_name}(${2}) -> ${3:Nil} {
+		${0:${VISUAL:todo}}
 	}
-snippet f "anonymous fn"
+snippet test "test fn"
+	pub fn ${1:name}_test() {
+		${0}
+	}
+snippet af "anonymous fn"
 	fn(${1}) { ${0:${VISUAL}} }
 snippet l "let assignment"
 	let ${1} = ${0}
@@ -40,3 +44,5 @@ snippet p "|>"
 	|> ${0}
 snippet tup "tuple()"
 	tuple(${0:${VISUAL}})
+snippet tf "fn(Type) -> Type"
+	fn(${1}) -> ${0}
