@@ -11,7 +11,7 @@ syntax keyword gleamKeyword
 	\ module import pub external
   \ type alias let as if else todo
 	\ case assert tuple
-  \ trait implement derive where
+  \ trait implement derive where effect
 highlight link gleamKeyword Keyword
 
 " Function definition
