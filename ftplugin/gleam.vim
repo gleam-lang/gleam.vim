@@ -4,6 +4,8 @@ autocmd!
 setlocal commentstring=//%s
 setlocal formatoptions-=t formatoptions+=croqnl
 
+setlocal comments=s0:/*!,ex:*/,s1:/*,mb:*,ex:*/,:////,:///,://
+
 " j was only added in 7.3.541, so stop complaints about its nonexistence
 silent! setlocal formatoptions+=j
 
