@@ -42,7 +42,7 @@ syntax region gleamCommentLine start="//" end="$" contains=gleamTodo
 highlight link gleamCommentLine Comment
 
 syntax keyword gleamTodo contained TODO FIXME XXX NB NOTE
-highlight def link rustTodo Todo
+highlight def link gleamTodo Todo
 
 " String
 syntax region gleamString start=/"/ end=/"/ contains=gleamStringModifier
