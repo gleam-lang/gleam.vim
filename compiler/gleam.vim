@@ -26,21 +26,20 @@ CompilerSet makeprg=gleam\ $*
 "
 " Written with the help of: https://flukus.github.io/vim-errorformat-demystified.html
 "
-CompilerSet errorformat=%Eerror:\ %m                " use 'error:' to indicate the start of a new error
-CompilerSet errorformat+=%C\ %#┌──\ %f:%l:%c\ ───   " pull out the file, line & column
-CompilerSet errorformat+=%C                         " allow empty lines within an error
-CompilerSet errorformat+=%C%.%#│%.%#                " ignore any line with a vertial formatting pipe in it
-CompilerSet errorformat+=%Z%m                       " assume any other line contributes to the error message
+CompilerSet errorformat=%Eerror:\ %m                  " use 'error:' to indicate the start of a new error
+CompilerSet errorformat+=%C\ %#┌─%#\ %f:%l:%c\ %#-%#  " pull out the file, line & column (matches optional spaces & dashes at the end in case they come back.)
+CompilerSet errorformat+=%C                           " allow empty lines within an error
+CompilerSet errorformat+=%C%.%#│%.%#                  " ignore any line with a vertial formatting pipe in it
+CompilerSet errorformat+=%Z%m                         " assume any other line contributes to the error message
 
 
 " Example error message
 "
-" error: Syntax error
-"
-"    ┌── /home/michael/root/projects/gleam-phoenix-mix/src/page_controller.gleam:7:27 ───
+" error: Unknown variable
+"    ┌─ /home/michael/root/projects/tutorials/gleam/try/code/src/main.gleam:19:18
 "    │
-"  7 │ pub fn index(my_conn: connConn) -> conn.Conn {
-"    │                           ^^^^ Unexpected token
-"    │
-"
-" Expected one of ")", ",", ".", "=", "external", "fn", "import", "pub", "type", "{"
+" 19 │   Ok(tuple(name, spot))
+"    │                  ^^^^ did you mean `sport`?
+" 
+" The name `spot` is not in scope here.
+
