@@ -9,7 +9,7 @@ let b:current_syntax = "gleam"
 " Keywords
 syntax keyword gleamKeyword
   \ module import pub external
-  \ type let as if else todo
+  \ type let as if else todo const
   \ case assert tuple try opaque
 highlight link gleamKeyword Keyword
 
