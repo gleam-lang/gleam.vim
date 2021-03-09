@@ -20,7 +20,7 @@ highlight link gleamDef Keyword
 syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl nextgroup=gleamFunctionArguments
 highlight link gleamFunctionDef Function
 
-syntax region gleamFunctionArguments start="(" end=")" contained contains=gleamType,gleamUnusedIdentifier
+syntax region gleamFunctionArguments start="(" end=")" contained contains=gleamType,gleamUnusedIdentifier,gleamOperator
 
 syntax match gleamUnusedIdentifier '\<_[0-9a-z_A-Z]*\>' contained
 highlight link gleamUnusedIdentifier Comment
