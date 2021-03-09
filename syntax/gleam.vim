@@ -17,8 +17,13 @@ highlight link gleamKeyword Keyword
 syntax keyword gleamDef fn nextgroup=gleamFunctionDef skipwhite skipempty
 highlight link gleamDef Keyword
 
-syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl
+syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl nextgroup=gleamFunctionArguments
 highlight link gleamFunctionDef Function
+
+syntax region gleamFunctionArguments start="(" end=")" contained contains=gleamType,gleamUnusedIdentifier
+
+syntax match gleamUnusedIdentifier '\<_[0-9a-z_A-Z]*\>' contained
+highlight link gleamUnusedIdentifier Comment
 
 " Int
 syntax match gleamInt '\<[0-9][0-9_]*\>'
