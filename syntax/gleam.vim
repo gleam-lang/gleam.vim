@@ -21,7 +21,7 @@ syntax match gleamFunctionDef "[a-z_-][0-9a-z_-]*" contained skipwhite skipnl
 highlight link gleamFunctionDef Function
 
 " Int
-syntax match gleamInt '\<[0-9][0-9_]*\>'
+syntax match gleamInt '\<\(0x[a-fA-F0-9_]\+\|[0-9][0-9_]*\)\>'
 highlight link gleamInt Number
 
 " Float
