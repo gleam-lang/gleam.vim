@@ -1,8 +1,14 @@
 # gleam.vim
 
+## Neovim users
+
+This plugin is not needed if you are using Neovim. Instead enable Gleam LSP
+(`lsp_config.gleam.setup({})`) and add the Gleam tree-sitter grammar (`:TSIntall
+gleam`).
+
 ## Description
 
-This is a Vim plugin that provides [Gleam][gleam] support to Vim/Neovim.
+This is a Vim plugin that provides [Gleam][gleam] support to Vim.
 
 - Syntax highlighting.
 - Code snippets compatible with
@@ -13,14 +19,12 @@ This is a Vim plugin that provides [Gleam][gleam] support to Vim/Neovim.
 
 ### Using Vim Plug
 
-1. Add `Plug 'gleam-lang/gleam.vim'` to `~/.vimrc` (for Vim) or
-   `~/.config/nvim/init.vim` (for Neovim).
+1. Add `Plug 'gleam-lang/gleam.vim'` to `~/.vimrc` (for Vim).
 2. Run `:PlugInstall`.
 
 ### Using Vundle
 
-1. Add `Plugin 'gleam-lang/gleam.vim'` to `~/.vimrc` (for Vim) or
-   `~/.config/nvim/init.vim` (for Neovim).
+1. Add `Plugin 'gleam-lang/gleam.vim'` to `~/.vimrc` (for Vim).
 2. Run `:PluginInstall`.
 
-[gleam]: https://github.com/lpil/gleam
+[gleam]: https://github.com/gleam-lang/gleam
