@@ -3,7 +3,7 @@
 ## Neovim users
 
 This plugin is not needed if you are using Neovim. Instead enable Gleam LSP
-(`lsp_config.gleam.setup({})`) and add the Gleam tree-sitter grammar (`:TSIntall
+(`lspconfig.gleam.setup({})`) and add the Gleam tree-sitter grammar (`:TSIntall
 gleam`).
 
 ## Description
