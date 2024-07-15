@@ -8,7 +8,7 @@ This plugin is not needed if you are using Neovim. Instead
 
 ### LazyVim users
 
-The [LazyVim config](https://github.com/LazyVim/LazyVim) has built-in support for Gleam in its [extras]](http://www.lazyvim.org/extras/lang/gleam). To set it up using Lua in the standard config files, you can edit the `lazy.lua` file in your config folder (typically `~/.config/nvim/lua/config/lazy.lua`).
+The [LazyVim config](https://github.com/LazyVim/LazyVim) has built-in support for Gleam in its [extras](http://www.lazyvim.org/extras/lang/gleam). To set it up using Lua in the standard config files, you can edit the `lazy.lua` file in your config folder (typically `~/.config/nvim/lua/config/lazy.lua`).
 
 ```lua
 require("lazy").setup({
