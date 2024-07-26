@@ -8,7 +8,9 @@ let b:current_syntax = "gleam"
 
 " Keywords
 syntax keyword gleamKeyword
-  \ import pub panic use type let as if else todo const case assert try opaque
+  \ import pub panic use
+  \ type let as if else todo const
+  \ case assert try opaque
 highlight link gleamKeyword Keyword
 
 " Function definition
