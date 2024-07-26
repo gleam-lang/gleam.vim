@@ -39,7 +39,7 @@ syntax match gleamHexa '\<0[xX]\(0*[1-9a-zA-Z][0-9a-zA-Z_]*\|0\)\>'
 highlight link gleamHexa Number
 
 "" Float
-syntax match gleamFloat '\d\(_\=\d\)*\.\(\d\(_\=\d\)*\)\=\(e-\=\d\)\=[0-9_]*'
+syntax match gleamFloat '\(0*[1-9][0-9_]*\|0\)\.\(0*[1-9][0-9_]*\|0\)\(e-\=0*[1-9][0-9_]*\)\='
 highlight link gleamFloat Float
 
 " Operators
