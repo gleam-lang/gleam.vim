@@ -23,19 +23,19 @@ highlight link gleamFunctionDef Function
 
 " Number
 "" Int
-syntax match gleamInt '\<\d[0-9_]*\>'
+syntax match gleamInt '\<\(0*[1-9][0-9_]*|0\)\>'
 highlight link gleamInt Number
 
 "" Binary
-syntax match gleamBinary '\<0[bB][01]+\>'
+syntax match gleamBinary '\<0[bB]\(0*1[01_]*\|0\)\>'
 highlight link gleamBinary Number
 
 "" Octet
-syntax match gleamOctet '\<0[oO][0-7]+\>'
+syntax match gleamOctet '\<0[oO]\(0*[1-7][0-7_]*\|0\)\>'
 highlight link gleamOctet Number
 
 "" Hexadecimal
-syntax match gleamHexa '\<0[xX]\x+\>'
+syntax match gleamHexa '\<0[xX]\(0*[1-9a-zA-Z][0-9a-zA-Z_]*\|0\)\>'
 highlight link gleamHexa Number
 
 "" Float
