@@ -85,5 +85,5 @@ highlight link gleamString String
 highlight link gleamStringModifier Special
 
 " Attribute
-syntax match gleamAttribute "@\(external\|deprecated\|target\)"
+syntax match gleamAttribute "@[a-z][a-z_]*"
 highlight link gleamAttribute PreProc
